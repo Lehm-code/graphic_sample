@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-// import 'package:graphic_sample/charts/radar_main_line.dart';
+import 'package:graphic_sample/charts/radar_main_line.dart';
 import 'package:graphic_sample/charts/radar_base_grid.dart';
 
 class RadarBasePage extends StatelessWidget {
@@ -13,7 +13,10 @@ class RadarBasePage extends StatelessWidget {
         children: [
           Center(
             child: Stack(
-              children: [SizedBox(height: 300, child: RadarBaseChart())],
+              children: [
+                SizedBox(height: 300, child: RadarBaseChart()),
+                SizedBox(height: 300, child: RadarMainChart()),
+              ],
             ),
           ),
         ],
