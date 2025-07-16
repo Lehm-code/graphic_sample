@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import 'package:graphic_sample/charts/radar_base_grid.dart';
+import 'package:graphic_sample/charts/radar_main_line.dart';
 
 class MainHomePage extends StatelessWidget {
   const MainHomePage({super.key});
@@ -12,9 +14,12 @@ class MainHomePage extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            ElevatedButton(
-              onPressed: () => context.push('/radar'),
-              child: const Text('レーダーチャート'),
+            Stack(
+              alignment: Alignment.center,
+              children: const [
+                SizedBox(height: 300, child: RadarBaseChart()),
+                SizedBox(height: 300, child: RadarMainChart()),
+              ],
             ),
             SizedBox(height: 16),
             ElevatedButton(

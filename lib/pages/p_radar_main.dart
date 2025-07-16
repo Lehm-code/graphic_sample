@@ -8,7 +8,7 @@ class RadarMainPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: const Text('graphic メイン')),
-      body: Column(children: [RadarMainChart()]),
+      body: Center(child: SizedBox(height: 300, child: RadarMainChart())),
     );
   }
 }

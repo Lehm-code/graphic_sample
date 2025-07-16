@@ -8,11 +8,7 @@ class RadarBasePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: const Text('graphic グリッド')),
-      body: Column(
-        children: [
-          Center(child: SizedBox(height: 300, child: RadarBaseChart())),
-        ],
-      ),
+      body: Center(child: SizedBox(height: 300, child: RadarBaseChart())),
     );
   }
 }
